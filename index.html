@@ -3,72 +3,46 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Yourtabbbbb</title>
+<title>YourTab-OS</title>
 <style>
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #0f0f0f;
-  color: white;
+body{
+  margin:0;
+  background:#0f0f0f;
+  color:white;
+  font-family:Arial, sans-serif;
 }
-
-/* Top bar */
-header {
-  background: #202020;
-  padding: 12px 20px;
-  font-size: 22px;
-  font-weight: bold;
+header{
+  background:#202020;
+  padding:12px 20px;
+  font-size:22px;
+  font-weight:bold;
 }
-
-/* Layout */
-.container {
-  display: flex;
+.container{display:flex;}
+.main{flex:3;padding:15px;}
+video{
+  width:100%;
+  max-height:500px;
+  background:black;
 }
-
-/* Video section */
-.main {
-  flex: 3;
-  padding: 15px;
+.title{margin-top:10px;font-size:18px;}
+.sidebar{
+  flex:1;
+  background:#181818;
+  padding:10px;
 }
-
-video {
-  width: 100%;
-  max-height: 500px;
-  background: black;
+.item{
+  display:flex;
+  gap:10px;
+  padding:8px;
+  cursor:pointer;
 }
-
-.title {
-  margin-top: 10px;
-  font-size: 18px;
+.item:hover{background:#303030;}
+.thumb{
+  width:120px;
+  height:70px;
+  background:#000;
 }
-
-/* Sidebar */
-.sidebar {
-  flex: 1;
-  background: #181818;
-  padding: 10px;
-}
-
-.item {
-  display: flex;
-  gap: 10px;
-  padding: 8px;
-  cursor: pointer;
-}
-
-.item:hover {
-  background: #303030;
-}
-
-.thumb {
-  width: 120px;
-  height: 70px;
-  background: #000;
-}
-
-.item-title {
-  font-size: 14px;
-}
+.item-title{font-size:14px;}
 </style>
 </head>
 
@@ -88,6 +62,7 @@ video {
   </div>
 
   <div class="sidebar">
+
     <div class="item" onclick="playVideo('vierraxwishyouwerehere.mp4','Vierra – Wish You Were Here')">
       <div class="thumb"></div>
       <div class="item-title">Vierra – Wish You Were Here</div>
@@ -97,16 +72,21 @@ video {
       <div class="thumb"></div>
       <div class="item-title">I Like You The Most</div>
     </div>
-  </div>
 
+    <div class="item" onclick="playVideo('payphone.mp4','Maroon 5 – Payphone')">
+      <div class="thumb"></div>
+      <div class="item-title">Maroon 5 – Payphone</div>
+    </div>
+
+  </div>
 </div>
 
 <script>
-function playVideo(file, title) {
-  const player = document.getElementById('player');
-  player.src = file;
+function playVideo(file,title){
+  const player=document.getElementById("player");
+  player.src=file;
   player.play();
-  document.getElementById('videoTitle').innerText = title;
+  document.getElementById("videoTitle").innerText=title;
 }
 </script>
 
