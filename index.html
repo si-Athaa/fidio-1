@@ -78,15 +78,20 @@ video{
       <div class="item-title">Maroon 5 – Payphone</div>
     </div>
 
+    <div class="item" onclick="playVideo('beautyandabeat.mp4','Justin Bieber – Beauty And A Beat')">
+      <div class="thumb"></div>
+      <div class="item-title">Justin Bieber – Beauty And A Beat</div>
+    </div>
+
   </div>
 </div>
 
 <script>
 function playVideo(file,title){
-  const player=document.getElementById("player");
-  player.src=file;
+  const player = document.getElementById("player");
+  player.src = file;
   player.play();
-  document.getElementById("videoTitle").innerText=title;
+  document.getElementById("videoTitle").innerText = title;
 }
 </script>
 
