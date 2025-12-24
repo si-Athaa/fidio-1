@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>YourTubeerrr</title>
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #0f0f0f;
+  color: white;
+}
+
+/* Top bar */
+header {
+  background: #202020;
+  padding: 12px 20px;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+/* Layout */
+.container {
+  display: flex;
+}
+
+/* Video section */
+.main {
+  flex: 3;
+  padding: 15px;
+}
+
+video {
+  width: 100%;
+  max-height: 500px;
+  background: black;
+}
+
+.title {
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+/* Sidebar */
+.sidebar {
+  flex: 1;
+  background: #181818;
+  padding: 10px;
+}
+
+.item {
+  display: flex;
+  gap: 10px;
+  padding: 8px;
+  cursor: pointer;
+}
+
+.item:hover {
+  background: #303030;
+}
+
+.thumb {
+  width: 120px;
+  height: 70px;
+  background: #000;
+}
+
+.item-title {
+  font-size: 14px;
+}
+</style>
+</head>
+
+<body>
+
+<header>▶ YourTube</header>
+
+<div class="container">
+
+  <div class="main">
+    <video id="player" controls>
+      <source src="vierraxwishyouwerehere.mp4" type="video/mp4">
+    </video>
+    <div class="title" id="videoTitle">
+      Vierra – Wish You Were Here
+    </div>
+  </div>
+
+  <div class="sidebar">
+    <div class="item" onclick="playVideo('vierraxwishyouwerehere.mp4','Vierra – Wish You Were Here')">
+      <div class="thumb"></div>
+      <div class="item-title">Vierra – Wish You Were Here</div>
+    </div>
+
+    <div class="item" onclick="playVideo('ilikeyouthemost.mp4','I Like You The Most')">
+      <div class="thumb"></div>
+      <div class="item-title">I Like You The Most</div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+function playVideo(file, title) {
+  const player = document.getElementById('player');
+  player.src = file;
+  player.play();
+  document.getElementById('videoTitle').innerText = title;
+}
+</script>
+
+</body>
+</html>
